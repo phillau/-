@@ -1,0 +1,745 @@
+{
+  "rightNumber" : 3,
+  "style" : {
+    "fontStyle" : "normal",
+    "lineColor" : "{242, 198, 19, 1.00}",
+    "fontWeight" : "normal",
+    "enablePalette" : true
+  },
+  "skeletonTheme" : {
+    "name" : "cable-taperedline",
+    "palette" : [
+
+    ],
+    "topicStyleForMain" : {
+      "lineType" : 1,
+      "topicShape" : 0,
+      "lineWidth" : 3
+    },
+    "topicStyleForSubtopic" : {
+      "lineType" : 1,
+      "topicShape" : 1,
+      "lineWidth" : 3
+    },
+    "mapStyle" : {
+      "taperedLine" : true
+    },
+    "topicStyleForCentral" : {
+      "lineType" : 1,
+      "topicShape" : 0,
+      "lineWidth" : 3
+    },
+    "topicStyleForFloating" : {
+      "lineType" : 1,
+      "topicShape" : 0,
+      "lineWidth" : 3
+    },
+    "relationshipStyle" : {
+      "lineWidth" : 2
+    }
+  },
+  "id" : "9DC4C73B-2C76-4687-B9F8-4606B3793079-12685-0001D12539712252",
+  "updateTime" : 1558268910.865427,
+  "colorTheme" : {
+    "name" : "summer",
+    "palette" : [
+      "{124, 214, 212, 1.00}",
+      "{178, 148, 139, 1.00}",
+      "{242, 198, 19, 1.00}",
+      "{173, 217, 55, 1.00}",
+      "{251, 168, 71, 1.00}",
+      "{102, 106, 126, 1.00}"
+    ],
+    "topicStyleForMain" : {
+      "lineType" : 2,
+      "lineWidth" : 5,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "topicMargin" : "{16, 6}",
+      "topicShape" : 1,
+      "fontColor" : "{91, 91, 91, 1.00}",
+      "lineColor" : "{124, 214, 212, 1.00}",
+      "fillColor" : "{255, 255, 255, 1.00}",
+      "fontName" : "AvenirNext-Regular",
+      "cornerRadius" : 8,
+      "fontFamily" : "Avenir Next"
+    },
+    "topicStyleForSubtopic" : {
+      "lineType" : 2,
+      "lineWidth" : 5,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "topicMargin" : "{6, 6}",
+      "topicShape" : 1,
+      "fontColor" : "{91, 91, 91, 1.00}",
+      "lineColor" : "{124, 214, 212, 1.00}",
+      "fillColor" : "{255, 255, 255, 1.00}",
+      "fontName" : "AvenirNext-Regular",
+      "cornerRadius" : 8,
+      "fontFamily" : "Avenir Next"
+    },
+    "mapStyle" : {
+      "fillColor" : "{255, 255, 255, 1.00}",
+      "lineType" : 0
+    },
+    "topicStyleForCentral" : {
+      "lineType" : 1,
+      "lineWidth" : 5,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "topicMargin" : "{28, 16}",
+      "topicShape" : 0,
+      "fontColor" : "{102, 106, 126, 1.00}",
+      "lineColor" : "{102, 106, 126, 1.00}",
+      "fillColor" : "{255, 255, 255, 1.00}",
+      "fontName" : "AvenirNext-Regular",
+      "cornerRadius" : 12,
+      "fontFamily" : "Avenir Next"
+    },
+    "topicStyleForFloating" : {
+      "lineType" : 2,
+      "lineWidth" : 5,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "topicMargin" : "{16, 6}",
+      "topicShape" : 1,
+      "fontColor" : "{91, 91, 91, 1.00}",
+      "lineColor" : "{124, 214, 212, 1.00}",
+      "fillColor" : "{255, 255, 255, 1.00}",
+      "fontName" : "AvenirNext-Regular",
+      "cornerRadius" : 8,
+      "fontFamily" : "Avenir Next"
+    },
+    "relationshipStyle" : {
+      "lineWidth" : 3,
+      "lineColor" : "{255, 87, 34, 1.00}"
+    }
+  },
+  "rootTopic" : {
+    "detach" : false,
+    "style" : {
+      "fontStyle" : "normal",
+      "enablePalette" : true,
+      "fontWeight" : "normal"
+    },
+    "folded" : false,
+    "id" : "71F6E6A3-3C9F-4254-87D5-473161FC2E49-12685-0001D12539721594",
+    "checkList" : false,
+    "title" : "jvm",
+    "position" : "{0, 0}",
+    "note" : {
+
+    },
+    "highlight" : false,
+    "subtopics" : [
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{124, 214, 212, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "0E85FB31-F5FE-4AA1-88FB-13C26064F5EE-12685-0001D1D217B57A5B",
+        "checkList" : false,
+        "title" : "优化参数",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "19039E40-2825-49C1-A9F6-33A1887BAD76-12685-0001D1DB2230D1D7",
+            "checkList" : false,
+            "title" : "-XX:+TraceClassLoading",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "用于追踪类的加载信息并打印出来"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "9200B67E-54A0-46FE-AA65-5820386FCF95-12685-0001D1E7C05B4F1C",
+            "checkList" : false,
+            "title" : "-XX:+TraceClassUnloading",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "用于追踪类的卸载信息并打印出来"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{178, 148, 139, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "900CA19E-3C8C-4B77-9CB6-36FBBE0919EA-12685-0001D17EB0BCE3F0",
+        "checkList" : false,
+        "title" : "类",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{178, 148, 139, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "30CA278F-4730-4EB9-AC0D-1F30C68BA442-12685-0001D1842CF07A23",
+            "checkList" : false,
+            "title" : "类的生命周期",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "2C731E0F-C37C-4D21-AFEF-C9FFC68F657D-12685-0001D1842CF3DA45",
+                "checkList" : false,
+                "title" : "加载",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "把class字节码文件加载到内存（方法区）中，然后创建一个java.lang.Class对象用来封装类在方法区内的数据结构并将此Class对象放入方法区"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "C146BC03-25B8-4D91-B7BF-DB14212B8F76-12685-0001D1842CF631B2",
+                "checkList" : false,
+                "title" : "连接",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "0D326992-7811-4768-B736-BFDC9CB41057-12685-0001D1842CF874EC",
+                    "checkList" : false,
+                    "title" : "验证",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "验证class文件的正确性"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "71554025-9B45-4801-BCA7-EDE823602F1C-12685-0001D1842CFA8A62",
+                    "checkList" : false,
+                    "title" : "准备",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "给静态变量分配内存空间并赋默认值"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "FA5BD004-7EC6-4E83-BCD2-F4697C3E1EC2-12685-0001D1842CFC7167",
+                    "checkList" : false,
+                    "title" : "解析",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "把类中的符号引用转换为直接引用，如在A类中a方法中引用了B类中的b方法，将b方法放入A类中"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "A13FC24A-776C-43F8-9D24-46C4F7A64548-12685-0001D1842CFE57DF",
+                "checkList" : false,
+                "title" : "初始化",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "给静态变量赋正确值"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "14F0C43B-4AAE-4C6F-887E-4E4BE30FC4B4-12685-0001D1842D002FD2",
+                "checkList" : false,
+                "title" : "使用",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D9E13B9A-0941-4021-A911-BD7EB514BDC0-12685-0001D1842D01FF92",
+                "checkList" : false,
+                "title" : "卸载",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{178, 148, 139, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "D025501C-1F8D-4003-81B9-AA76ABE33CE8-12685-0001D18E9A8C7118",
+            "checkList" : false,
+            "title" : "类的主动使用",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "java虚拟机只用在对类或接口的‘首次主动使用’才会‘初始化’他们\n被动使用不会初始化类，但是可能会加载他们"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "0B5A414B-18AB-48BC-9DFE-56646A5BD33D-12685-0001D1920B6A05D0",
+                "checkList" : false,
+                "title" : "new一个对象",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "C53EBD72-97E1-4B48-B7BB-1006877D04A1-12685-0001D1950448B320",
+                "checkList" : false,
+                "title" : "通过Class.forName()等反射构造对象",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "6FA7924F-CC50-4B09-A590-6838B7B96642-12685-0001D1958B42B82F",
+                "checkList" : false,
+                "title" : "访问类的静态变量或对该静态变量赋值(不能被final修饰，被final修饰的变量就被放入常量池了，访问这种变量的时候不会导致类的初始化)",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "A7C118D2-EE7F-4D5D-B266-318B88786FA2-12685-0001D1963F2D4E42",
+                "checkList" : false,
+                "title" : "调用类的静态方法（静态方法有没有被final修饰无所谓）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "24D3E701-CB81-4CF9-BDC5-F15115727E4D-12685-0001D196DB926870",
+                "checkList" : false,
+                "title" : "初始化子类会导致父类也被初始化",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "CAC8B61A-02FD-480A-9B1E-B9D54DF1B026-12685-0001D1974CC62F61",
+                "checkList" : false,
+                "title" : "main方法所在类",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{242, 198, 19, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "3A30F266-131A-4B4E-BC72-91D03B7DC4A5-12685-0001D40B19853484",
+        "checkList" : false,
+        "title" : "类加载器",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "AC0A7C7F-F4F8-4DC4-81D2-48A23B606619-12685-0001D417F7C3D720",
+            "checkList" : false,
+            "title" : "类加载器类型",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D476C7AE-49D2-4F88-B7B2-0A007667C8B2-12685-0001D41E59F57111",
+                "checkList" : false,
+                "title" : "根类加载器（bootstrap）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "3042ADC0-C5F0-43D1-A0F2-092406730D31-12685-0001D41F1EC7EDBB",
+                "checkList" : false,
+                "title" : "扩展类加载器（extension）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "C2A82149-E13C-406A-BC07-76EFABFAC826-12685-0001D43A79DB5392",
+                "checkList" : false,
+                "title" : "应用（系统）类加载器（app，system）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "47E2D4B5-BEC5-41D0-AFB9-929914DAD365-12685-0001D4427B650FC0",
+                "checkList" : false,
+                "title" : "自定义类加载器（custom）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "3D812E1C-EB7C-4341-962E-C0239318D2B3-12685-0001D90C924E8E51",
+            "checkList" : false,
+            "title" : "如何获取ClassLoader",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "85D2AF23-5BB8-4588-834E-C36E0F8ADB64-12685-0001D9134943E1FE",
+                "checkList" : false,
+                "title" : "clazz.getClassLoader()",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "获得当前类的classloader"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "4F282B4F-B50E-4493-8EF6-20C3C2DC6EFA-12685-0001D91731C8990A",
+                "checkList" : false,
+                "title" : "ClassLoader.getSystemClassLoader()",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "获得系统（应用）类加载器"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "08F14458-566A-4A85-9264-88E65D1608D9-12685-0001D91990AB0EFE",
+                "checkList" : false,
+                "title" : "Thread.currentThread().getContextClassLoader()",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "获得当前线程上下文的classloader"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "30C586F6-BF84-423F-89CC-CED5C08A17BA-12685-0001D923DE0F6E9D",
+                "checkList" : false,
+                "title" : "DriverManager.getCallerClassLoader()",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "获得调用者的classloader"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      }
+    ],
+    "checkboxStatus" : 0
+  },
+  "createTime" : 1558268910.865427,
+  "mapName" : ""
+}
