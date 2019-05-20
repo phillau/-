@@ -338,7 +338,7 @@
                 "title" : "初始化",
                 "position" : "{0, 0}",
                 "note" : {
-                  "text" : "给静态变量赋正确值"
+                  "text" : "从上到下顺序给静态变量赋正确值"
                 },
                 "highlight" : false,
                 "checkboxStatus" : 0
@@ -646,6 +646,65 @@
               "enablePalette" : true
             },
             "folded" : false,
+            "id" : "BAD92636-AA53-47D1-AF6C-84FDBD35C713-12685-0001E79D5459712B",
+            "checkList" : false,
+            "title" : "类的加载和卸载",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "7AD65B9A-5648-4A21-917C-2EC2693D3D61-12685-0001E7A088884B1F",
+                "checkList" : false,
+                "title" : "类的加载：父委托机制",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "320796FA-E38D-4DF7-9680-13EBB40D7959-12685-0001E7A23E197262",
+                "checkList" : false,
+                "title" : "类的卸载",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "当代表一个类的Class对象不再被引用时，此Class对象就会结束生命周期，类在方法区内的数据也会被卸载，类的生命周期也就结束了\n注意：由Java虚拟机自带的类加载器所加载的类，在虚拟机的生命周期中，始终不会被卸载。由用户自定义的类加载器加载的类是可以被卸载的"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
             "id" : "3D812E1C-EB7C-4341-962E-C0239318D2B3-12685-0001D90C924E8E51",
             "checkList" : false,
             "title" : "如何获取ClassLoader",
@@ -727,6 +786,202 @@
                 "position" : "{0, 0}",
                 "note" : {
                   "text" : "获得调用者的classloader"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "C32CDA3C-684C-4E2B-84AF-0D9EAB378481-12685-0001E4BDEC74040A",
+            "checkList" : false,
+            "title" : "命名空间",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "jvm会为每一个类加载器维护一个对应的命名空间，其中维护着由该类加载器加载的类型。\n注意：子加载器能够访问父加载器的命名空间，父加载器不能访问子加载器的命名空间"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E7ABF5C9-C16F-4B03-9ACB-1DFDBE4420E2-12685-0001E50B13A91E7E",
+                "checkList" : false,
+                "title" : "不同的命名空间可以有相同的完整类名",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "7153D45B-3684-40D6-AD44-B179B22ED460-12685-0001E50BE8A3324A",
+                "checkList" : false,
+                "title" : "同一个命名空间不能有两个相同的完整类名",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "6EF0CCF9-305C-485B-87C1-C8E869F693CD-12685-0001E4CE52303602",
+            "checkList" : false,
+            "title" : "自定义类加载器",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "B0DBCB69-6E66-43E6-916E-FEBA196ABB31-12685-0001E4D0843F79D0",
+                "checkList" : false,
+                "title" : "不打破父委托机制：重写findClass()即可",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "7F7AF1C9-C2AD-47D4-BE66-0356F90713AF-12685-0001E4DCBBA0BA67",
+                "checkList" : false,
+                "title" : "打破父委托机制：需要重写loadClass()",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "A9D16008-1654-4297-A952-08C08DEABCC6-12685-0001F98678B92C2F",
+            "checkList" : false,
+            "title" : "线程上下文类加载器",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "context classloader"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "275DC00C-804B-4BD9-BBBC-571877828119-12685-0001F98BC23AEAD2",
+                "checkList" : false,
+                "title" : "一般使用方式：获取—>使用—>还原",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "ClassLoader loader = Thread.currentThread().getContextClassLoader();\n        try{\n            Thread.currentThread().setContextClassLoader(loader);\n            doSomething();\n        }finally {\n            Thread.currentThread().setContextClassLoader(loader);\n        }"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "87213B25-E9F8-4CE1-A7E8-F6D3D8F6A098-12685-0001F9FDDD252BB3",
+                "checkList" : false,
+                "title" : "特性：破坏了父委托机制",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "EB7CF794-6648-4DC7-A9D2-33E9DABCD16D-12685-0001FBC580F96E63",
+                "checkList" : false,
+                "title" : "作用：解决父委托机制的缺点，比如可以在根类加载器中获取系统类加载器来加载对应的类",
+                "position" : "{0, 0}",
+                "note" : {
+
                 },
                 "highlight" : false,
                 "checkboxStatus" : 0
