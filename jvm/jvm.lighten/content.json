@@ -991,6 +991,516 @@
           }
         ],
         "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{173, 217, 55, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "4AB8F49C-D78D-4B68-B451-23BF796CBB81-14914-00020D5F12694238",
+        "checkList" : false,
+        "title" : "字节码文件",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "8553CB16-9548-415F-8DA2-E876AE93F199-14914-000224BEA8936B2E",
+            "checkList" : false,
+            "title" : "格式",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "94AC1965-D26F-4A52-8376-66CF67FF6825-14914-000224CB5CE1C5E5",
+                "checkList" : false,
+                "title" : "4：魔数：CAFEBABE",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D7D74211-439F-40B7-8AB9-756CD1D6D920-14914-000224CB5DAA0A0B",
+                "checkList" : false,
+                "title" : "4：java版本号",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "6E37F9CA-96F0-45DB-A543-5A66415686E3-14914-000224CB5E8E2806",
+                "checkList" : false,
+                "title" : "2：类访问标志",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "40399784-268B-4478-AA07-6BAA990961B8-14914-000224CB5F450490",
+                "checkList" : false,
+                "title" : "2+n：实现接口",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "A9A4044A-B05F-4AE7-BCEA-341EBA5236E9-14914-000224CB5F4669A7",
+                    "checkList" : false,
+                    "title" : "2：接口个数",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "A88BE6E1-B184-4D50-8449-803204D6D08E-14914-000224CB5F47724C",
+                    "checkList" : false,
+                    "title" : "n：接口名",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "5578BD46-F0DC-4358-ADCB-C059357281E3-14914-000224CB607EC7C7",
+                "checkList" : false,
+                "title" : "2+n：常量池",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "AE47C719-12C6-428E-87EF-3583999EA4AA-14914-000224CB608012EC",
+                    "checkList" : false,
+                    "title" : "2：常量个数",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "实际数量为此值减1"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "CAD5D46B-E1F1-4D05-9B45-20BD7C6ACE8A-14914-000224CB60810BFA",
+                    "checkList" : false,
+                    "title" : "n：常量池表",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "534F7706-E647-4FB9-87D1-D12C041B03C5-14914-000224CB61A3A0EF",
+                "checkList" : false,
+                "title" : "2：当前类名",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "1AD2BE7D-A78D-42C5-9D9B-42CCDF450B86-14914-000224CB625AE7C8",
+                "checkList" : false,
+                "title" : "2：父类名",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "BD14087E-4652-4920-B977-FD0BD2ED326E-14914-000224CB632041B8",
+                "checkList" : false,
+                "title" : "2+n：静态变量和成员变量",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "87299433-62C4-491F-9D03-8FC30DC3A6BD-14914-000224CB63216A39",
+                    "checkList" : false,
+                    "title" : "2：变量个数",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "733025A9-021F-4C57-8205-1E8B09D4E794-14914-000224CB63224E51",
+                    "checkList" : false,
+                    "title" : "n：变量表",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "734AFFE3-FAFB-4A77-B520-8710B8FD4E44-14914-000224CB644A9E0B",
+                "checkList" : false,
+                "title" : "2+n：方法",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "17ABD4FE-3741-44D1-AB49-8B8E4FA14D69-14914-000224CB644BCC5D",
+                    "checkList" : false,
+                    "title" : "2：方法个数",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "0355D9EA-C3F9-42D3-8C90-5A86953A8CA5-14914-000224CB644CA8A9",
+                    "checkList" : false,
+                    "title" : "n：方法表",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "2B35059D-5897-490B-9A38-E88872A4B214-14914-000224CB658494A5",
+                "checkList" : false,
+                "title" : "2+n：类附加属性",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "951E7D34-20C7-45B7-B76D-86647B04332E-14914-000224CB6585C1CD",
+                    "checkList" : false,
+                    "title" : "2：附加属性个数",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "B8E94175-98F1-4229-86D3-B8A04D9C867B-14914-000224CB6586A53B",
+                    "checkList" : false,
+                    "title" : "n：附加属性表",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "6DFA04CC-CD76-4D66-A2E0-F2185D7D0D46-14914-000224CE71192F1A",
+            "checkList" : false,
+            "title" : "工具",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "4D972BA4-3D9D-42E6-8EFF-568ABDEFF412-14914-000224D08BA61AEF",
+                "checkList" : false,
+                "title" : "javap -v -p",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "5A4F4E06-2B5E-4107-8956-374C71B53CC1-14914-000224E54EC0EA96",
+                "checkList" : false,
+                "title" : "hex fiend：查看16进制格式",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E0489FC7-81CC-44BF-99B1-CF08CED3E50F-14914-000224EDB57DDB44",
+                "checkList" : false,
+                "title" : "jclasslib：idea插件",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
       }
     ],
     "checkboxStatus" : 0
