@@ -1019,6 +1019,143 @@
               "enablePalette" : true
             },
             "folded" : false,
+            "id" : "30DDE4DE-38A3-4620-8387-AD88B6EFC07E-19161-00023C30E4779816",
+            "checkList" : false,
+            "title" : "数据类型",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "FFAA6555-0EF4-4A48-92BC-337C4328837D-19161-00023C35799E78DE",
+                "checkList" : false,
+                "title" : "字节数据直接量",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "这是基本的数据类型，共细分为u1、u2、u4、u8四种，分别代表连续的1个字节、2个字节、4个字节、8个字节组成的整体数据"
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "77A28038-256E-4B93-8942-BF9038E9F5F2-19161-00023C3C08F7489D",
+                    "checkList" : false,
+                    "title" : "U1",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "1E242395-3AD1-40E6-BCD6-2EAD1C0C2C89-19161-00023C3C840274A2",
+                    "checkList" : false,
+                    "title" : "U2",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "FCFF08C3-5F40-4748-BF6B-4BA6A2306C47-19161-00023C3D04024C66",
+                    "checkList" : false,
+                    "title" : "U4",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "fontStyle" : "normal",
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontWeight" : "normal",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "5E88545B-C881-44AC-8C6E-4E32949D6901-19161-00023C3D72C11501",
+                    "checkList" : false,
+                    "title" : "U8",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "A8428721-1812-4013-A7BE-050C82162DDD-19161-00023C380D98D797",
+                "checkList" : false,
+                "title" : "表（数组）",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "表示由多个基本数据或其他表，按照既定顺序组成的大的数据集合。表是有结构的，它的结构体现在：组成表的成分所在的位置和顺序都是已经严格定义好的。 "
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
             "id" : "8553CB16-9548-415F-8DA2-E876AE93F199-14914-000224BEA8936B2E",
             "checkList" : false,
             "title" : "格式",
@@ -1497,6 +1634,318 @@
                 "checkboxStatus" : 0
               }
             ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "E720E8E1-2D0A-43F8-A20E-D155FF7D294F-19161-000230E55B70CB49",
+            "checkList" : false,
+            "title" : "执行方式",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "EAFBC8E9-22CA-4260-A92D-28BB77668251-19161-000230E818E8C18C",
+                "checkList" : false,
+                "title" : "编译执行（JIT）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "171D6BFD-6F98-468A-A064-67D78673D235-19161-000230EA4441321F",
+                "checkList" : false,
+                "title" : "解释执行",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{251, 168, 71, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "868D2B76-F620-4C83-BE97-C25D2DF41307-19161-00023023FF39C9B7",
+        "checkList" : false,
+        "title" : "指令",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "7CEEC44F-1E3A-4856-992C-FA93389D832A-19161-00023025CE7C4151",
+            "checkList" : false,
+            "title" : "方法调用",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "258B01DB-AD39-46F3-8BA8-8B024A783BCA-19161-000230278ED47CF0",
+                "checkList" : false,
+                "title" : "invokestatic",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "C31F7DC7-6008-476A-9D35-139176EC153C-19161-0002306116DD6CB4",
+                "checkList" : false,
+                "title" : "invokespecial",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "B52F583F-0279-46B7-8734-8238D8F40103-19161-00023062D08B5DA3",
+                "checkList" : false,
+                "title" : "invokevirtual",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D42AEC9A-262F-4358-8D42-09CC0582A3A8-19161-00023064D5C8A110",
+                "checkList" : false,
+                "title" : "invokeinterface",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "BDABFD75-255D-4C85-85DB-605426683CF1-19161-00023067915ACCAA",
+                "checkList" : false,
+                "title" : "invokedynamic",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{102, 106, 126, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "86B9FB8D-55C5-4F45-B06B-90A85973D29C-19161-00023EACF9533229",
+        "checkList" : false,
+        "title" : "结构",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "F30E8BEE-FC7C-4262-B4EB-BB321903DBCB-19161-00023EAF3C251F5B",
+            "checkList" : false,
+            "title" : "堆（公共）：主要存储实例化的对象",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "CA99676D-1C35-400C-98FA-4965A601F38A-19161-00023ECB58E1FFD3",
+            "checkList" : false,
+            "title" : "方法区（公共）：主要存储Class类信息，常量，静态变量，常量池",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "982493C8-EA9F-492A-A655-DF0F0A77DE6A-19161-00023EB72800B73F",
+            "checkList" : false,
+            "title" : "虚拟机栈（线程私有）：包括操作数栈，局部变量表，动态链接，方法出口等",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "C86E1191-6CCA-4BC1-8CEB-867951934888-19161-00023EC268286E62",
+            "checkList" : false,
+            "title" : "本地方法栈（线程私有）：和虚拟机栈结构类似，用于处理native方法",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "70AB2ECF-0D40-4FD4-965E-C05C2DE095FF-19161-00023ED8E7427F71",
+            "checkList" : false,
+            "title" : "程序计数器（线程私有）：负责字节码解释器工作的时候记录字节码行号和位置等",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
             "checkboxStatus" : 0
           }
         ],
