@@ -223,7 +223,7 @@
             "title" : "类的生命周期",
             "position" : "{0, 0}",
             "note" : {
-
+              "text" : "虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验，转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型的过程就是虚拟机的类加载机制"
             },
             "highlight" : false,
             "subtopics" : [
@@ -413,7 +413,7 @@
                 "folded" : false,
                 "id" : "0B5A414B-18AB-48BC-9DFE-56646A5BD33D-12685-0001D1920B6A05D0",
                 "checkList" : false,
-                "title" : "new一个对象",
+                "title" : "创建类的实例（new一个对象，调用newInstance()等）",
                 "position" : "{0, 0}",
                 "note" : {
 
@@ -1632,6 +1632,25 @@
                 },
                 "highlight" : false,
                 "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "2CD77AA4-1789-446A-9D4F-5BC3FAE3548E-33734-00026B4ACFF1F33F",
+                "checkList" : false,
+                "title" : "hsdis：查看JIT编译器动态生成的汇编代码",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "java -server -XX:+UnlockDiagnosticVMOptions  -XX:+PrintAssembly -XX:+LogCompilation -XX:LogFile=live.log 类的全路径名"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
               }
             ],
             "checkboxStatus" : 0
@@ -1944,6 +1963,65 @@
             "position" : "{0, 0}",
             "note" : {
 
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{124, 214, 212, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "D4483307-26F4-4ED9-B90E-DDD6EE1FA0D3-33734-0002636EEA1F1D7C",
+        "checkList" : false,
+        "title" : "编译器",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "7ABC247A-3D47-44E5-86D1-7B4F3515382E-33734-00026370DD37C20B",
+            "checkList" : false,
+            "title" : "javac（静态编译器）",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "将.java文件编译为.class文件（编译阶段）"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "29440D90-CEBD-4EF9-8B05-C996B5D42F87-33734-000263717B43C8A6",
+            "checkList" : false,
+            "title" : "JIT（动态编译器）",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "将热点字节码动态编译为宿主机的机器码（程序运行阶段）"
             },
             "highlight" : false,
             "checkboxStatus" : 0
