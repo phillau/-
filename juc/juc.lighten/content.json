@@ -1,5 +1,5 @@
 {
-  "rightNumber" : 5,
+  "rightNumber" : 6,
   "style" : {
     "fontStyle" : "normal",
     "fontName" : "Avenir",
@@ -116,6 +116,29 @@
       "lineColor" : "{255, 87, 34, 1.00}"
     }
   },
+  "detachedTopics" : [
+    {
+      "detach" : true,
+      "style" : {
+        "lineColor" : "{124, 214, 212, 1.00}",
+        "fontName" : "Avenir",
+        "fontStyle" : "normal",
+        "fontWeight" : "normal",
+        "fontFamily" : "Avenir",
+        "enablePalette" : true
+      },
+      "folded" : false,
+      "id" : "4ED652F6-189C-44C2-9087-7089BE8339A3-24036-0000F25BECF88C32",
+      "checkList" : false,
+      "title" : "自由主题",
+      "position" : "{-711.15779361858949, -2630.2737670299257}",
+      "note" : {
+
+      },
+      "highlight" : false,
+      "checkboxStatus" : 0
+    }
+  ],
   "rootTopic" : {
     "detach" : false,
     "style" : {
@@ -1102,7 +1125,7 @@
                     "title" : "volatile（一定的有序性）",
                     "position" : "{0, 0}",
                     "note" : {
-                      "text" : "写volatile变量的操作与该操作之前的任何读写操作不能重排序。\n读volatile变量的操作与该操作之后的读写操作不能重排序"
+                      "text" : "在写操作之前插入StoreStore和LoadStore的复合屏障保证写volatile变量的操作与该操作之前的任何读写操作不能重排序。\n\n在读操作之后插入LoadStore和LoadLoad的复合屏障保证读volatile变量的操作与该操作之后的读写操作不能重排序"
                     },
                     "highlight" : false,
                     "checkboxStatus" : 0
@@ -1229,7 +1252,7 @@
                     "folded" : false,
                     "id" : "BD5DF521-5B1A-45C6-B77B-089AEA7A50C5-33734-000279CA1999D7F9",
                     "checkList" : false,
-                    "title" : "锁定规则：一个unLock操作先行发生于后面对同一个锁额lock操作",
+                    "title" : "锁定规则：一个unLock操作先行发生于后面对同一个锁的lock操作",
                     "position" : "{0, 0}",
                     "note" : {
 
@@ -1251,6 +1274,48 @@
                     "id" : "713F6B49-400E-4DE8-B743-E4BF57A071DB-33734-000279CA199A24E7",
                     "checkList" : false,
                     "title" : "volatile变量规则：对一个变量的写操作先行发生于后面对这个变量的读操作",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{102, 106, 126, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "61AB461F-CB25-4B89-8F41-AF437481A377-3419-0000DFDAF7A064E9",
+                    "checkList" : false,
+                    "title" : "start()规则：如果线程A执行操作ThreadB.start()（启动线程B），那么A线程的ThreadB.start()操作happens-before于线程B中的任意操作。",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{102, 106, 126, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "F40B1982-DF12-4EA3-94F8-22784E09F4C1-3419-0000DFDF0B7EB1CC",
+                    "checkList" : false,
+                    "title" : "join()规则：如果线程A执行操作ThreadB.join()并成功返回，那么线程B中的任意操作happens-before于线程A从ThreadB.join()操作成功返回。",
                     "position" : "{0, 0}",
                     "note" : {
 
@@ -1644,12 +1709,272 @@
             "folded" : false,
             "id" : "E9DAFE7B-DF17-49F3-BBE3-168603982925-33734-000279DFCF3F1128",
             "checkList" : false,
-            "title" : "死锁（Deadlock）",
+            "title" : "死锁（Deadlock）：鹬蚌相争",
             "position" : "{0, 0}",
             "note" : {
 
             },
             "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "4C6B1791-EF8B-47C0-B742-7FD0452C37CC-674-00008C4E77AC5339",
+                "checkList" : false,
+                "title" : "死锁产生的必要条件",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "B98C9375-E6F7-44E7-9946-B3C938E6990A-674-000093FC6FE38B2E",
+                    "checkList" : false,
+                    "title" : "资源互斥",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "49C5F663-FE99-4196-B95C-4E98D2FC7EC9-674-000093FF57602B18",
+                    "checkList" : false,
+                    "title" : "资源不可抢夺",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "2A8D32F6-0B5E-4124-A0E8-4BAB2C29B399-674-00008C5780615257",
+                    "checkList" : false,
+                    "title" : "占用并等待资源",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "375337F1-3824-4BEE-93C9-EE40DDF4B0FA-674-00008C59B61E12B9",
+                    "checkList" : false,
+                    "title" : "循环等待资源",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D35183AE-D10A-441B-89AC-C8DA23B8012F-674-00008C5D5B49AE87",
+                "checkList" : false,
+                "title" : "如何规避死锁",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "1AAA8A15-55C9-4295-9F28-07BB856EE85A-674-00008C619CEC89A8",
+                    "checkList" : false,
+                    "title" : "粗锁法",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "E275654F-3DD6-46A7-A53B-5C42E275101A-674-00008D7571FA05A9",
+                    "checkList" : false,
+                    "title" : "锁排序法",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "11D1B09F-FC12-4104-9FFD-324C6713D199-674-00008D9C717D0269",
+                    "checkList" : false,
+                    "title" : "使用ReentrantLock的tryLock(long,TimeUnit)",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "FF6CF996-60C3-416A-A3F6-710E917A70BE-674-00008ED71AA6A49D",
+                    "checkList" : false,
+                    "title" : "开放调用，即不加锁，比如原先需要在遍历HashSet时加了synchronized锁，现在改为用CopyOnWriteArraySet就可以去掉锁了",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "F5689882-966D-43E1-93FE-9F3D21BAFA31-674-00008F745A5C2B30",
+                "checkList" : false,
+                "title" : "死锁的故障恢复",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{178, 148, 139, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "7A2BA2D3-9175-4688-8E65-687F43C4D438-674-00008F7F3324E2C7",
+                    "checkList" : false,
+                    "title" : "如果用的synchronized或者Lock.lock()，死锁是不可恢复的，只能重启jvm",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              }
+            ],
             "checkboxStatus" : 0
           },
           {
@@ -1665,12 +1990,56 @@
             "folded" : false,
             "id" : "F84B0FFE-1920-4C91-9619-C0B802B4BDB7-33734-000279F117492C18",
             "checkList" : false,
-            "title" : "锁死（Lockout）",
+            "title" : "锁死（Lockout）：睡美人",
             "position" : "{0, 0}",
             "note" : {
 
             },
             "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D2FAE303-CC62-4C94-AB84-5861FF334EC8-674-0000908AE199C618",
+                "checkList" : false,
+                "title" : "信号丢失锁死",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "248CEC66-B5C3-4E86-96C6-CDA79B38F6FD-674-0000908CA9EDD247",
+                "checkList" : false,
+                "title" : "嵌套监视器锁死",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
             "checkboxStatus" : 0
           },
           {
@@ -1686,7 +2055,7 @@
             "folded" : false,
             "id" : "5B10E706-12D4-4C2C-833B-7149BDC5ADA2-33734-00027A09589C351C",
             "checkList" : false,
-            "title" : "活锁（Livelock）",
+            "title" : "活锁（Livelock）：屡战屡败，屡败屡战",
             "position" : "{0, 0}",
             "note" : {
               "text" : "例子：例如线程从队列中拿出一个任务来执行，如果任务执行失败，那么将任务重新加入队列，继续执行。假设任务总是执行失败，或者某种依赖的条件总是不满足，那么线程一直在繁忙却没有任何结果。"
@@ -1707,10 +2076,10 @@
             "folded" : false,
             "id" : "1143DA31-AAA5-41CF-ADB7-7540631A9858-33734-00027A1C4D2C3D9C",
             "checkList" : false,
-            "title" : "饥饿（Starvation）",
+            "title" : "饥饿（Starvation）:巧妇难为无米之炊",
             "position" : "{0, 0}",
             "note" : {
-
+              "text" : "典型例子：高争用模式下使用非公平读写锁"
             },
             "highlight" : false,
             "checkboxStatus" : 0
@@ -1778,6 +2147,115 @@
               "text" : "概念：同时试图访问同一个已经被其他线程占用的资源的线程数越少，说明争用情况越低，简称低争用，反之就是高争用"
             },
             "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "006B5863-6A57-43CC-96E6-041246FDC717-24036-0000E6D26500059D",
+            "checkList" : false,
+            "title" : "优化思路",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E963BB67-89D4-4BCD-8CDF-9C07CAE5B658-24036-0000E6DCD332E3C3",
+                "checkList" : false,
+                "title" : "消除锁的使用（使用锁的替代品）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "55065E23-562A-4594-A6CA-0A83361A6F7C-24036-0000E6E4C1F743E1",
+                "checkList" : false,
+                "title" : "降低锁的争用程度",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "91B48B6D-925F-4C80-94AD-00899AC1EB6B-24036-0000E6EB27BE7556",
+                    "checkList" : false,
+                    "title" : "减少申请锁的频率",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "E9E2567F-4AF3-4352-A8BC-500C03ED56C0-24036-0000E6FE5BDEF64A",
+                    "checkList" : false,
+                    "title" : "缩短持有锁的时间（减小临界区长度）",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              }
+            ],
             "checkboxStatus" : 0
           }
         ],
@@ -1879,7 +2357,7 @@
               "enablePalette" : true
             },
             "folded" : false,
-            "id" : "52BB3AFC-48F5-4F27-9FAE-323C69BF63C4-33734-00027F8C62D68F22",
+            "id" : "C78033D2-D2DD-450C-B7FF-829BDE891F6E-674-0000479B0CCDFA0F",
             "checkList" : false,
             "title" : "锁",
             "position" : "{0, 0}",
@@ -1899,9 +2377,74 @@
                   "enablePalette" : true
                 },
                 "folded" : false,
-                "id" : "6ACBB1CB-C2B5-4D1F-B67B-38BD09E9AD5D-707-0000019577B92A52",
+                "id" : "A824E691-B0ED-43E5-9D82-255F2EA94304-674-0000479B0CCFC608",
                 "checkList" : false,
-                "title" : "synchronized：非公平锁",
+                "title" : "锁的粒度",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "一个锁实例所保护的共享数据量的大小"
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{102, 106, 126, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "EFC76D8B-0E04-4DB4-9E79-58042AD44953-674-0000479B0CD07C54",
+                    "checkList" : false,
+                    "title" : "粒度过粗：会导致线程在申请锁的时候需要进行不必要的等待",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{102, 106, 126, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "CBCD183A-1905-429A-A7E4-701564861F8E-674-0000479B0CD15EDC",
+                    "checkList" : false,
+                    "title" : "粒度过细：会增加锁调度的开销",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "BB8B7DD0-B7C5-452D-A24B-D072D18A9FB9-674-0000479B0CD23F3D",
+                "checkList" : false,
+                "title" : "锁的开销：主要包括锁的申请和释放所产生的开销以及锁可能导致的上下文切换的开销，这些开销主要是处理器时间",
                 "position" : "{0, 0}",
                 "note" : {
 
@@ -1920,12 +2463,75 @@
                   "enablePalette" : true
                 },
                 "folded" : false,
-                "id" : "80F219D7-E03C-4A49-A31B-5CD5ACC6A60D-707-000001994A7463DE",
+                "id" : "DC6FF76C-E5E1-4B07-B662-2AF281C6AE9A-674-0000479B0CD3137D",
                 "checkList" : false,
-                "title" : "lock：支持公平和非公平",
+                "title" : "synchronized：非公平锁",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "实现原理：jvm会在临界区之前和之后分别插入获取屏障和释放屏障使得临界区内的代码和临界区外的代码不能重排序，这种机制和锁排他性一起保障了原子性以及有序性，jvm还会类型volatile一样在monitorexit指令后面插入StoreLoad屏障，保障可见性。另外StoreLoad屏障还保证了一个锁的monitorexit指令不会和其他锁的monitorenter指令重排序，保证了monitorenter和monitorexit指令总是成对出现\n（对于x86处理器，monitorexit的实现本身就带有StoreLoad屏障的效果，所以不会在monitorexit后面再插入StoreLoad屏障了）"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "CCF6A573-CBA7-4C97-821B-90C88004820B-674-0000479B0CD3A027",
+                "checkList" : false,
+                "title" : "ReentrantLock：支持公平和非公平",
                 "position" : "{0, 0}",
                 "note" : {
                   "text" : "jstack -l pid\n可以通过getQueueLength()获取此锁当前的等待线程数量"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E1F0FC1D-5C01-444C-8396-21E7B645A81C-674-0000479B0CD42488",
+                "checkList" : false,
+                "title" : "ReentrantReadWriteLock",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "读写锁的降级：一个在获取写锁以后可以在释放写锁之前获取读锁"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "37112790-D49C-4644-BD61-0DF026E7AD73-674-0000479B0CD4A3F5",
+                "checkList" : false,
+                "title" : "volatile",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "不会引起上下文切换，所以叫轻量级锁\n保障可见性，有序性和保障long\/double型变量读写的原子性"
                 },
                 "highlight" : false,
                 "checkboxStatus" : 0
@@ -1949,7 +2555,7 @@
             "title" : "volatile",
             "position" : "{0, 0}",
             "note" : {
-
+              "text" : "x86处理器下jvm对此关键字做的事情是在volatile变量写操作后面插入StoreLoad屏障，保证将写缓冲器的数据冲刷到高速缓存并将其他处理器的对应数据置为无效，因为x86处理器只支持StoreLoad重排序，这里是用一个lock前缀的机器指令充当StoreLoad屏障的"
             },
             "highlight" : false,
             "checkboxStatus" : 0
@@ -1991,7 +2597,7 @@
             "title" : "final",
             "position" : "{0, 0}",
             "note" : {
-              "text" : "当一个对象的引用对其他线程可见的时候，可以保证其他线程看到的该对象的final字段是初始化完毕的，并不能保障包含final属性的对象本身对外的可见性"
+              "text" : "当一个对象的引用对其他线程可见的时候，可以保证其他线程看到的该对象的final字段是初始化完毕的，并不能保障包含final属性的对象本身对外的可见性\n\nx86处理器下JIT需要保证final字段初始化的操作不会重排序到构造器完成之后，其他处理器下可能需要StoreStore屏障来保证"
             },
             "highlight" : false,
             "checkboxStatus" : 0
@@ -2013,199 +2619,6 @@
             "position" : "{0, 0}",
             "note" : {
 
-            },
-            "highlight" : false,
-            "checkboxStatus" : 0
-          }
-        ],
-        "checkboxStatus" : 0
-      },
-      {
-        "detach" : false,
-        "style" : {
-          "lineColor" : "{124, 214, 212, 1.00}",
-          "fontName" : "Avenir",
-          "fontStyle" : "normal",
-          "fontWeight" : "normal",
-          "fontFamily" : "Avenir",
-          "enablePalette" : true
-        },
-        "folded" : false,
-        "id" : "BB85F6C6-6618-4C75-92C4-A963E01F2826-707-000001CB5FB173F6",
-        "checkList" : false,
-        "title" : "锁",
-        "position" : "{0, 0}",
-        "note" : {
-
-        },
-        "highlight" : false,
-        "subtopics" : [
-          {
-            "detach" : false,
-            "style" : {
-              "lineColor" : "{124, 214, 212, 1.00}",
-              "fontName" : "Avenir",
-              "fontStyle" : "normal",
-              "fontWeight" : "normal",
-              "fontFamily" : "Avenir",
-              "enablePalette" : true
-            },
-            "folded" : false,
-            "id" : "882B75C6-1852-4176-82C1-9D637AF6D622-707-000001CC82121248",
-            "checkList" : false,
-            "title" : "锁的粒度",
-            "position" : "{0, 0}",
-            "note" : {
-              "text" : "一个锁实例所保护的共享数据量的大小"
-            },
-            "highlight" : false,
-            "subtopics" : [
-              {
-                "detach" : false,
-                "style" : {
-                  "lineColor" : "{124, 214, 212, 1.00}",
-                  "fontName" : "Avenir",
-                  "fontStyle" : "normal",
-                  "fontWeight" : "normal",
-                  "fontFamily" : "Avenir",
-                  "enablePalette" : true
-                },
-                "folded" : false,
-                "id" : "A483D312-3BB6-45F6-9760-C8D07472FBB6-707-000001EE43B97B71",
-                "checkList" : false,
-                "title" : "粒度过粗：会导致线程在申请锁的时候需要进行不必要的等待",
-                "position" : "{0, 0}",
-                "note" : {
-
-                },
-                "highlight" : false,
-                "checkboxStatus" : 0
-              },
-              {
-                "detach" : false,
-                "style" : {
-                  "lineColor" : "{124, 214, 212, 1.00}",
-                  "fontName" : "Avenir",
-                  "fontStyle" : "normal",
-                  "fontWeight" : "normal",
-                  "fontFamily" : "Avenir",
-                  "enablePalette" : true
-                },
-                "folded" : false,
-                "id" : "B5636403-702C-40EA-991D-63F17F0F487F-707-000001FE16B517D6",
-                "checkList" : false,
-                "title" : "粒度过细：会增加锁调度的开销",
-                "position" : "{0, 0}",
-                "note" : {
-
-                },
-                "highlight" : false,
-                "checkboxStatus" : 0
-              }
-            ],
-            "checkboxStatus" : 0
-          },
-          {
-            "detach" : false,
-            "style" : {
-              "lineColor" : "{124, 214, 212, 1.00}",
-              "fontName" : "Avenir",
-              "fontStyle" : "normal",
-              "fontWeight" : "normal",
-              "fontFamily" : "Avenir",
-              "enablePalette" : true
-            },
-            "folded" : false,
-            "id" : "878DBB2A-718A-48B3-88FB-AB05E0EEAD20-707-00000217D52EF513",
-            "checkList" : false,
-            "title" : "锁的开销：主要包括锁的申请和释放所产生的开销以及锁可能导致的上下文切换的开销，这些开销主要是处理器时间",
-            "position" : "{0, 0}",
-            "note" : {
-
-            },
-            "highlight" : false,
-            "checkboxStatus" : 0
-          },
-          {
-            "detach" : false,
-            "style" : {
-              "lineColor" : "{124, 214, 212, 1.00}",
-              "fontName" : "Avenir",
-              "fontStyle" : "normal",
-              "fontWeight" : "normal",
-              "fontFamily" : "Avenir",
-              "enablePalette" : true
-            },
-            "folded" : false,
-            "id" : "E33036D4-F5BB-4806-A501-C26B310F02B3-707-000009F3E5FE0624",
-            "checkList" : false,
-            "title" : "synchronized",
-            "position" : "{0, 0}",
-            "note" : {
-
-            },
-            "highlight" : false,
-            "checkboxStatus" : 0
-          },
-          {
-            "detach" : false,
-            "style" : {
-              "lineColor" : "{124, 214, 212, 1.00}",
-              "fontName" : "Avenir",
-              "fontStyle" : "normal",
-              "fontWeight" : "normal",
-              "fontFamily" : "Avenir",
-              "enablePalette" : true
-            },
-            "folded" : false,
-            "id" : "B3CA58A8-C40E-46B2-865F-F1C5EA9D104E-707-000009FA11FF9BC1",
-            "checkList" : false,
-            "title" : "ReentrantLock",
-            "position" : "{0, 0}",
-            "note" : {
-
-            },
-            "highlight" : false,
-            "checkboxStatus" : 0
-          },
-          {
-            "detach" : false,
-            "style" : {
-              "lineColor" : "{124, 214, 212, 1.00}",
-              "fontName" : "Avenir",
-              "fontStyle" : "normal",
-              "fontWeight" : "normal",
-              "fontFamily" : "Avenir",
-              "enablePalette" : true
-            },
-            "folded" : false,
-            "id" : "2968EBDD-3A06-446A-B3F3-9B8A353F4061-707-000009FD10250FD2",
-            "checkList" : false,
-            "title" : "ReentrantReadWriteLock",
-            "position" : "{0, 0}",
-            "note" : {
-              "text" : "读写锁的降级：一个在获取写锁以后可以在释放写锁之前获取读锁"
-            },
-            "highlight" : false,
-            "checkboxStatus" : 0
-          },
-          {
-            "detach" : false,
-            "style" : {
-              "lineColor" : "{124, 214, 212, 1.00}",
-              "fontName" : "Avenir",
-              "fontStyle" : "normal",
-              "fontWeight" : "normal",
-              "fontFamily" : "Avenir",
-              "enablePalette" : true
-            },
-            "folded" : false,
-            "id" : "24211052-6A1A-4BC2-9271-10C1E9C2B5CB-707-00000F179724DFA5",
-            "checkList" : false,
-            "title" : "volatile",
-            "position" : "{0, 0}",
-            "note" : {
-              "text" : "不会引起上下文切换，所以叫轻量级锁\n保障可见性，有序性和保障long\/double型变量读写的原子性"
             },
             "highlight" : false,
             "checkboxStatus" : 0
@@ -2341,6 +2754,2156 @@
             "checkboxStatus" : 0
           }
         ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{173, 217, 55, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "B1A42390-801E-4DCF-802A-E6930AB6EB54-674-00004BDFD2277C7F",
+        "checkList" : false,
+        "title" : "阿姆达尔定律：尽量减少程序中必须串行的部分",
+        "position" : "{0, 0}",
+        "note" : {
+          "text" : "多线程程序的提速主要来自于多个线程对可并行化部分的耗时均摊，因此，为了能使多线程程序获得较大的提速，应该注意减少程序中必须串行的部分，而不是仅寄希望于增加线程"
+        },
+        "highlight" : false,
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{251, 168, 71, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "7FCE8B27-EA9E-43A9-B3D8-20BA301F8D2D-674-00004D98E89902AF",
+        "checkList" : false,
+        "title" : "实现并发化的策略",
+        "position" : "{0, 0}",
+        "note" : {
+          "text" : "多线程编程的一个实施策略是从单线程程序向多线程程序进化"
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "8F5552D3-B125-4FCD-9485-35730A097ABF-674-00004D9BF73F30ED",
+            "checkList" : false,
+            "title" : "基于数据的分割策略",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "从程序处理的数据入手，产生若干同质的工作者线程"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "1478AF16-A19F-4E14-9902-CC7CC3D0A247-674-00004D9E6B20EB14",
+            "checkList" : false,
+            "title" : "基于任务的分割策略",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "从程序的处理逻辑入手，产生多个相互协作的异质工作者线程"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "02ABF287-4927-4E01-9257-F273978A2FDE-674-00004DA4258ECD5D",
+                "checkList" : false,
+                "title" : "按任务资源消耗属性分割",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "一个线程执行的任务往往同时兼具CPU密集型和IO密集型特征，称为混合型任务\n有时候我们可能需要将这种混合型任务进一步分解为CPU密集型子任务和IO密集型子任务，分配不同的工作线程去执行，以提高并发性"
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{251, 168, 71, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "BDA0AF1B-6C0A-4A87-90DE-091E35FB4E4F-674-00004DA425903F46",
+                    "checkList" : false,
+                    "title" : "CPU密集型：建议线程数为CPU个数+1",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "消耗的主要资源是CPU时间\n典型场景：加密解密"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{251, 168, 71, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "2C6783C3-F65A-498F-A288-94BDD2B4939B-674-00004DA425911341",
+                    "checkList" : false,
+                    "title" : "I\/O密集型：建议线程数为2*CPU个数（当然如果一个线程都足以满足要求就没必要设置那么多了，一个不满足要求的话向2*CPU个数靠近）",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "主要消耗的资源是IO资源（磁盘，网络等）\n典型场景：文件读写，网络读写"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{251, 168, 71, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "81447046-7A89-48F8-A056-29E229D9E7E1-674-00004DA9B1E38F17",
+                "checkList" : false,
+                "title" : "按处理步骤分割",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{102, 106, 126, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "043CFC2C-5F5D-4B5E-B1D5-50604EC02AE9-674-000050A9E37701BB",
+        "checkList" : false,
+        "title" : "线程间协作",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "FBAC2664-080F-428B-82EC-CC8720CA3D61-674-000050B0F6ED4396",
+            "checkList" : false,
+            "title" : "wait\/notify",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "Object someObject = new Object();\nsynchronized (someObject){\n            while (保护条件){\n                someObject.wait();\n            }\n            doAction();\/\/目标动作\n        }\n\nsynchronized (someObject){\n            updateSharedState();\/\/更新共享变量\n            someObject.notify();\/\/唤醒其他线程\n        }"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E9CF20AC-AAEA-4045-8B5C-AFC0202D3EAD-674-00005729DA8A9E51",
+                "checkList" : false,
+                "title" : "欺骗性唤醒",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "D5ACD429-909B-453F-9BCB-603E3E593DEC-674-0000579A4E7662C1",
+                "checkList" : false,
+                "title" : "信号丢失",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "某些情况notify会导致信号丢失问题，因此可以用notifyall规避，尽管notifyall可能导致额外的上下文切换开销"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "55DCCC26-D8FC-4EC3-8474-C7569A1FF278-674-00005A54E5B36106",
+            "checkList" : false,
+            "title" : "join",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "其实就是用的wait\/notify实现的"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "4F5CE9BA-5381-4C69-91BB-171484968CED-674-00005BDA2B561701",
+            "checkList" : false,
+            "title" : "condition",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : " private final ReentrantLock lock = new ReentrantLock();\n    private final Condition condition = lock.newCondition();\n    public void guardMethod() {\n        lock.lock();\n        try {\n            while (保护条件){\n                condition.await();\n            }\n            doAction();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        } finally {\n            lock.unlock();\n        }\n    }\n\n    public void notifyMethod(){\n        lock.lock();\n        try {\n            updateSharedState();\n            condition.signal();\n        }finally {\n            lock.unlock();\n        }\n    }"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "9E9558E6-BA0B-4283-94F4-37D98C48ED62-674-00005E24CF4EABED",
+                "checkList" : false,
+                "title" : "可以通过在应用代码层次上建立条件变量和保护条件的对应关系，解决过早唤醒问题，因此其使用导致的上下文切换可能比wait\/notify少一些",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "019BFEF9-E03D-4F8A-A555-119E0663CDE7-674-00005E4BCE0BDA07",
+                "checkList" : false,
+                "title" : "可以通过awaitUtil的返回值确定是超时还是被通知导致的返回",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "BA5DA97A-5AAF-4DB9-837E-C35A19F492DC-674-00005E79EE150680",
+            "checkList" : false,
+            "title" : "CountDownLatch：一个countDownLatch实例只能够实现一次的等待和唤醒",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "82B37802-50A2-46D4-B4FB-11DB08010EEE-674-000060D89B645BE9",
+            "checkList" : false,
+            "title" : "CyclicBarrier：此实例是可以被重复使用的",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "如果代码中调用cyclicbarrier的wait方法时没有在循环当中，或者不是为了模拟高并发操作，那可能存在对cyclicbarrier的滥用\n因为此类的典型使用场景是使迭代算法并发化或者在测试代码中模拟高并发"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "B61E9A48-DEA1-4C52-8D44-6C81A75160C9-674-000067305B879A51",
+            "checkList" : false,
+            "title" : "阻塞队列",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "574AA69C-7B4C-4E88-B7E5-B350D15C02C9-674-000067305B890D54",
+                "checkList" : false,
+                "title" : "ArrayBlockingQueue：支持公平和非公平调度（适合消费者和生产者线程之间并发程度比较低的情况下使用）",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "使用数组作为存储空间，不会增加垃圾回收的负担。\nput，take操作使用的同一个锁，可能导致锁的高争用，进而造成较多的上下文切换"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "67E82079-39C0-48A6-AE8C-28CF88A9FE85-674-000067305B89E067",
+                "checkList" : false,
+                "title" : "LinkedBlockingQueue：只支持非公平调度（如果生产者和消费者之间的并发程度比较高，可能会加大队列内部锁的争用，此时适合选择此队列）",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "使用链表作为存储空间，可能增加垃圾回收的负担。\nput和take操作用的是两个锁，降低了锁争用的可能性。\n维护当前队列长度用的原子变量，可能导致额外的开销。"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{102, 106, 126, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "77AA090F-C589-48B6-B056-F85D4E32470D-674-000067305B8AC07C",
+                "checkList" : false,
+                "title" : "SynchronousQueue：支持公平和非公平调度",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "可能造成较多上下文切换\n适合在消费者和生产者处理能力相差不大的情况下使用"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "D4DE337E-C38B-4479-B240-8A26A32F772B-674-00006732B4FA6773",
+            "checkList" : false,
+            "title" : "Semaphore：通过配额实现流量控制（使用无界队列作为生产者消费者模式的传输通道时往往借助此类控制生产者的生产速率）",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "private final Semaphore semaphore = new Semaphore(10);\n    private final ArrayBlockingQueue queue = new LinkedBlockingQueue<P>();\n\n    public String put(P product){\n        semaphore.acquire();\n        try {\n            queue.put(product);\n       }finally {\n           semaphore.release();\n       }\n    }"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "F5527151-F38C-4DD9-A526-79D433491392-674-00006ADF0210745C",
+            "checkList" : false,
+            "title" : "PipeInputStream\/PipeOutputStream（适合在单生产者-单消费者模式使用）",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "AD0FFE5D-F5E6-4EAB-9AE6-2DE7C7172ADD-674-00006AE3DF1FA36F",
+            "checkList" : false,
+            "title" : "Exchanger",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "此类也可以作为传输通道，对双缓冲技术提供了支持，生产者消费者各维护一个缓冲区，双方通过执行exchange方法来交换各自持有的缓冲区，当消费者在消费一个填充满的缓存区时，生产者可以填充待填充的缓冲区，从而实现生产和消费的并发，此类便于我们能够对产品的粒度进行优化"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{102, 106, 126, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "45E07610-F897-47D4-B135-C9FFD1DF770B-674-00006BC6ED912C7C",
+            "checkList" : false,
+            "title" : "InterruptException：Two-Phase Termination模式",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "依照惯例，抛出InterruptException异常的方法，通常会在其抛出该异常时将当前线程的线程中断标记重置为false\n\n\/\/Two-Phase Termination模式\npublic class TerminatedThread extends Thread {\n    private volatile boolean flag = false;\n\n    @Override\n    public void run() {\n        while (!flag){\n            doAction();\n        }\n    }\n\n    private void doAction() {\n        System.out.println(\"hello\");\n        try {\n            Thread.sleep(100);\n        } catch (InterruptedException e) {\n        }finally {\n            System.out.println(\"done\");\n        }\n    }\n\n    public void shutDown(){\n        flag = true;\n        this.interrupt();\n    }\n\n    public static void main(String[] args) throws InterruptedException {\n        TerminatedThread thread = new TerminatedThread();\n        thread.start();\n        Thread.sleep(1000);\n        thread.shutDown();\n    }\n}\n"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{124, 214, 212, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "2950C30D-B0B9-4075-8BB6-1B996700726B-674-0000773619B102F5",
+        "checkList" : false,
+        "title" : "其他线程安全实现方式（锁的替代品）",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "39E54014-4614-4925-9492-D89DA1DFFB9E-674-0000773E2F23450C",
+            "checkList" : false,
+            "title" : "无状态对象",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "D0277BF4-4DF3-49CB-A855-0BABB0541FA6-674-0000774025980E18",
+            "checkList" : false,
+            "title" : "不可变对象",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "A80584EF-60E9-45E7-BC00-987633BDF1D4-674-000077423EEBDB6C",
+            "checkList" : false,
+            "title" : "线程特有对象：ThreadLocal<T>（通常被申明为某个类的静态变量）",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "ThreadLocal相当于线程访问其线程特有对象的代理，即各个线程通过这个代理可以创建并访问各自的线程特有对象，泛型T表示线程特有对象的类型。一个线程可以使用不同的ThreadLocal实例创建并访问自己不同的线程特有对象，多个线程使用同一个ThreadLocal实例所访问到的是属于各自的不同的线程访问对象实例"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{124, 214, 212, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "177E1357-C607-43F4-8558-ED91825ED1B0-674-000082962B8A0145",
+                "checkList" : false,
+                "title" : "场景1：使用非线程安全对象，又不希望因此引入锁",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{124, 214, 212, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "BDD484BF-FE45-43B5-9459-E72AF8ACB01B-674-000082A54B0FA450",
+                "checkList" : false,
+                "title" : "场景2：使用线程安全对象，但是又希望避免其使用锁带来的开销和可能的高争用问题",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{124, 214, 212, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E44C2244-7475-4DF7-8BA0-527C80DF23FF-674-000082B77EEA4052",
+                "checkList" : false,
+                "title" : "场景3：隐式参数传递（有观点认为隐式参数传递会使系统难于理解）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{124, 214, 212, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "F6F18D95-3F67-4B16-9984-A300D37E6C59-674-0000830CCE3B52D0",
+                "checkList" : false,
+                "title" : "场景4：特定于线程的单例模式（希望每一个线程有且仅有一个该类的实例）",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "2E6D202D-E1D2-4C4E-8608-6EE567C01258-674-00008A252493E726",
+            "checkList" : false,
+            "title" : "java同步集合\/juc并发集合",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "57F0B6FF-7F12-4F4D-809C-CE4A4DCE1912-674-00008F09E9E50A2B",
+            "checkList" : false,
+            "title" : "volatile",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "D882C0BD-2F9E-49FD-8FC9-D93F273DE021-24036-0000EE3AF3AAC6F8",
+            "checkList" : false,
+            "title" : "原子变量",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{242, 198, 19, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "1ECC0148-74A0-4777-AF7D-B24C46A16B61-674-000096B9940B589A",
+        "checkList" : false,
+        "title" : "线程管理",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "9E29FBB9-8D26-4F6C-86DA-85CA1F9CA46B-674-000096BB34D7559A",
+            "checkList" : false,
+            "title" : "异常处理：设置UncaughtExceptionHandler",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "public class UncaughtExceptionTest {\n    public static void main(String[] args) {\n        Thread thread = new Thread(() -> {\n            System.out.println(\"before\");\n            int i = 1 \/ 0;\n            System.out.println(\"after\");\n        });\n        thread.setUncaughtExceptionHandler((t, e) -> {\n            System.out.println(t.getName());\n            try {\n                Thread.sleep(5000);\n            } catch (InterruptedException e1) {\n                e1.printStackTrace();\n            }\n            e.printStackTrace();\n        });\n        thread.start();\n    }\n}"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "1A60A0A6-5270-4F1A-B526-679E8C07AE2F-674-000096BFCF3526CC",
+            "checkList" : false,
+            "title" : "线程组",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "线程与线程组的关系可以看作文件与文件夹的关系。\n如果仅仅为了区分一些线程与另外一些线程，我们可以使用线程的命名规则来实现，不同功能的线程以不同的规则命名。\n所以多数情况下我们可以忽略线程组这个概念的存在"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "17B67B62-BFA0-410A-9C79-912229E5BB72-674-00009967A2B4690A",
+            "checkList" : false,
+            "title" : "线程的暂挂与恢复：利用等待通知实现",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "package io.github.viscent.mtia.test;\n\nimport java.util.concurrent.locks.Condition;\nimport java.util.concurrent.locks.ReentrantLock;\n\npublic class PauseProceedTest extends ReentrantLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        PauseProceedTest pauseProceedTest = new PauseProceedTest();\n        new Thread(() -> {\n            for (int i = 0; i < 10000; i++) {\n                int finalI = i;\n                pauseProceedTest.action(() -> {\n                    {\n                        System.out.println(\"干活中。。。\"+ finalI);\n                        try {\n                            Thread.sleep(100);\n                        } catch (InterruptedException e) {\n                            e.printStackTrace();\n                        }\n                    }\n                });\n                try {\n                    Thread.sleep(100);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n        }).start();\n        Thread.sleep(5000);\n        System.out.println(\"停10秒\");\n        pauseProceedTest.suspend();\n        Thread.sleep(10000);\n        System.out.println(\"继续\");\n        pauseProceedTest.resume();\n    }\n\n    private volatile boolean suspend = false;\n    private final Condition condition = newCondition();\n\n    public void suspend() {\n        suspend = true;\n    }\n\n    public void resume() {\n        lock();\n        try {\n            suspend = false;\n            condition.signal();\n        } finally {\n            unlock();\n        }\n    }\n\n    public void action(Runnable r) {\n        lock();\n        try {\n            while (suspend) {\n                try {\n                    condition.await();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            r.run();\n        } finally {\n            unlock();\n        }\n    }\n\n\/\/    public abstract void doAction();\n}\n"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{242, 198, 19, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "0F97F5C8-20DE-4746-927C-F52BE4DD58BE-674-00009AE31CE723FF",
+            "checkList" : false,
+            "title" : "线程池（生产者-消费者模式）",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "7F4C3D88-ED7A-4110-90AA-62963FD5B785-674-00009AE5952D0CA3",
+                "checkList" : false,
+                "title" : "七大参数",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "F98F927D-748A-4E91-B057-79232970A335-674-00009F736ED812AD",
+                "checkList" : false,
+                "title" : "shutdown()\/shutdownNow()",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "shutdown:已经提交的任务会继续执行，后面再提交的任务会交给拒绝策略。shutdown返回的时候线程池可能还未结束，所以需要调用awaitTemination等待线程池结束。\nshutdownNow:正在执行的任务会被停止，已提交还未执行的任务不会被执行，会作为返回值返回给用户处理。"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "5F1EDA88-ED31-42FE-BB42-760E8FB4005B-674-00009F79A85113E3",
+                "checkList" : false,
+                "title" : "线程池死锁",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "彼此有依赖关系的任务需要提交给不同的线程池执行以避免死锁"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "48C9A360-09A6-4552-AA9C-251B89CE3ED5-674-0000A1CBC523B2F7",
+                "checkList" : false,
+                "title" : "excute\/submit",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "execute：1、没有返回值 2、其执行过程中抛出的未捕获异常会被UncaughtExceptionHandler处理，我们通过ThreadFactory自定义UncaughtExceptionHandler来侦测执行过程中抛出的未捕获异常\nsubmit：1、可以通过返回的future.get()获取执行结果，也就是Callable的返回值 2、其执行过程中抛出的未捕获异常不会被UncaughtExceptionHandler处理，但是可以通过捕获future.get()抛出的异常来知晓任务执行过程中抛出的异常"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "AC6F7619-6CA4-40C0-965E-CCDE62C12030-674-0000A404D7283B1C",
+                "checkList" : false,
+                "title" : "线程池监控",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "764AB88B-F02F-4EEA-AABB-4756FE86D719-674-0000AAB2C3F9A8AB",
+                "checkList" : false,
+                "title" : "Executors",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{242, 198, 19, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "427A6D39-C904-4BBA-AE0F-1A0ECAE6CB5F-674-0000AAB5A9FB38B0",
+                    "checkList" : false,
+                    "title" : "Executors.newCachedThreadPool();",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "适合大量耗时短且提交频率高的任务"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{242, 198, 19, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "68493E60-965A-40D2-AE61-5A02E7234E7C-674-0000AAB6810D57AA",
+                    "checkList" : false,
+                    "title" : "Executors.newFixedThreadPool(12);",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{242, 198, 19, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "0EF721F7-CD2D-4B32-9A57-C0D540276124-674-0000AAB76984943C",
+                    "checkList" : false,
+                    "title" : "Executors.newSingleThreadExecutor();",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "适合单(多)生产者-单消费者模式"
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{242, 198, 19, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "8851C6A5-18BE-4F75-B58E-3941AEC9A66F-96787-0000B5ED6CE916E1",
+                    "checkList" : false,
+                    "title" : "Executors.newScheduledThreadPool(2)",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "interval：同一个任务，两次执行的开始时间之差，即为执行周期interval\n如果在执行过程中抛出未捕获异常，那么该任务就不会再被执行了"
+                    },
+                    "highlight" : false,
+                    "subtopics" : [
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{242, 198, 19, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "EB0178A3-07F2-48E8-9972-42E11A972A56-96787-0000B5F31A73B1C4",
+                        "checkList" : false,
+                        "title" : "scheduleAtFixedRate：interval=max(任务执行时长，period)",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{242, 198, 19, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "442ECDD1-C6C2-4052-9E07-D52C7272005C-96787-0000B5F5EF7164AD",
+                        "checkList" : false,
+                        "title" : "scheduleWithFixedDelay：interval=任务执行时长+delay",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      }
+                    ],
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "3D01CC20-7618-4CA3-B2C0-F82C55A94927-674-0000AD571724C4B4",
+                "checkList" : false,
+                "title" : "ExecutorCompletionService：异步任务的批量提交以及获取这些任务的执行结果",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{242, 198, 19, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "69EDBBD5-5C58-4587-B7ED-EA8A167F5B06-674-0000AEE1F4EB28DE",
+                "checkList" : false,
+                "title" : "FutureTask：融合了Runnale和Callable的好处，还支持future和回调，FutureTask是被设计用来表示一次性执行的任务，因此同一个futureTask实例不能被提交多次",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "futureTask同时实现了Runnable和Future接口，线程池的submit方法就是通过execute方法结合futureTask实现的：\n\npublic <T> Future<T> submit(Callable<T> task) {\n        if (task == null) throw new NullPointerException();\n        RunnableFuture<T> ftask = newTaskFor(task);\n        execute(ftask);\n        return ftask;\n    }"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{173, 217, 55, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "D351A36C-21FC-4F9D-AE45-128B1DB6D479-3419-0000BDEDD723C93B",
+        "checkList" : false,
+        "title" : "JMM",
+        "position" : "{0, 0}",
+        "note" : {
+          "text" : "java为了屏蔽不同处理器的内存模型差异，必须定义自己的内存模型。这就是java内存模型JMM。\nJMM定义了final，volatile，synchronized关键字的行为。\nJMM定义了线程和主内存之间的抽象关系，线程之间共享的变量存储在主内存，每个线程有自己的私有的本地内存存储了该线程读写的共享变量的副本，本地内存是一个抽象概念，包括了缓冲，写缓冲区，寄存器等"
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "5CC43A2D-659E-4DDF-9580-A80E0FF1DA47-3419-0000C0B53905E54C",
+            "checkList" : false,
+            "title" : "高速缓存",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "为程序所访问的每个变量保留了一份相应内存空间所存储数据的副本\n相当于硬件实现的存储容量很小的一个散列表，key为数据内存地址，value为缓存条目所组成的内存数据的副本或者准备写入内存的数据"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "80C96E77-176C-4913-B8CE-AA2336F22374-3419-0000C10783E6CA3F",
+                "checkList" : false,
+                "title" : "由于CPU高速缓存导致的缓存一致性问题：读脏数据和丢失更新",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "FD2DB8A2-CBE4-4CE8-8287-6EDAADEA61F6-3419-0000C1094D789473",
+                "checkList" : false,
+                "title" : "缓存条目",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "E4A78408-E037-4186-A96E-058267664BC0-3419-0000C10D2CCE5379",
+                    "checkList" : false,
+                    "title" : "Tag",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "E982BBCE-4A49-41CD-848B-ACBBF55FA61E-3419-0000C10C29D1BA87",
+                    "checkList" : false,
+                    "title" : "缓存行（Data Block）：高速缓存与主存数据交换的最小单元，用于存储从内存中读取或者准备写往内存的数据",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "735904F2-CAA7-4757-9E11-FF8EE7464102-3419-0000C1108A1B75D7",
+                    "checkList" : false,
+                    "title" : "Flag",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "subtopics" : [
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "BAF56BC6-62D9-4ADE-8DF2-36B032DFF660-3419-0000C127A27F9E4D",
+                        "checkList" : false,
+                        "title" : "Modified",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "48D80787-742E-4E64-99ED-83492D749FC3-3419-0000C127A3304671",
+                        "checkList" : false,
+                        "title" : "Exclusive",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "A4955E66-19BC-4C38-8235-E06A852C6F2E-3419-0000C127A53947DF",
+                        "checkList" : false,
+                        "title" : "Shared",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "F55B87FB-0700-4671-8E4C-D0E1D4BC683D-3419-0000C127A6E910EA",
+                        "checkList" : false,
+                        "title" : "Invalid",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      }
+                    ],
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "B00A3C53-0862-4D27-BCB7-EA6C5BC679B1-3419-0000C5D8E84862B5",
+                "checkList" : false,
+                "title" : "MESI缓存一致性协议：MESI对内存访问的控制类似于读写锁，此协议是针对高速缓存的",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "subtopics" : [
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "E1FDF6E3-36AB-4CCE-BFA4-C3B8F984BAEF-3419-0000C5D8E849ECDD",
+                    "checkList" : false,
+                    "title" : "缓存条目状态",
+                    "position" : "{0, 0}",
+                    "note" : {
+
+                    },
+                    "highlight" : false,
+                    "subtopics" : [
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "457A63DC-8114-4EFA-A490-724A3C70A2CE-3419-0000C5D8E84AA610",
+                        "checkList" : false,
+                        "title" : "Modified：相应缓存行包含对相应内存地址所做的更新结果数据",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "300C087E-D294-4DA5-A896-6C3241FCDB4A-3419-0000C5D8E84B6265",
+                        "checkList" : false,
+                        "title" : "Exclusive：相应缓存行包含相应内存地址所对应的副本数据，并且以独占的方式保留",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "9BF2C918-8877-4766-813E-38DB50474A41-3419-0000C5D8E84C66D5",
+                        "checkList" : false,
+                        "title" : "Shared：相应缓存行包含相应内存地址所对应的数据副本，并且其他处理器的高速缓存也可能包含相同内存地址对应的副本数据",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "4C8EACF2-F365-4B25-A10B-7822BBD85D1F-3419-0000C5D8E84D10E3",
+                        "checkList" : false,
+                        "title" : "Invalid：相应缓存行不包含任何内存地址对应的有效副本数据，该状态是缓存行条目的初始状态",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      }
+                    ],
+                    "checkboxStatus" : 0
+                  },
+                  {
+                    "detach" : false,
+                    "style" : {
+                      "lineColor" : "{173, 217, 55, 1.00}",
+                      "fontName" : "Avenir",
+                      "fontStyle" : "normal",
+                      "fontWeight" : "normal",
+                      "fontFamily" : "Avenir",
+                      "enablePalette" : true
+                    },
+                    "folded" : false,
+                    "id" : "113D0577-D930-4177-904A-8E0B1AD130E4-3419-0000C5D8E84DBE7B",
+                    "checkList" : false,
+                    "title" : "MESI消息类型",
+                    "position" : "{0, 0}",
+                    "note" : {
+                      "text" : "处理器会往总线发送消息，其他处理器或者主内存会做出响应"
+                    },
+                    "highlight" : false,
+                    "subtopics" : [
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "048F4085-DA2B-4B88-A13E-8ABB44AF2CBB-3419-0000C5D8E84E556E",
+                        "checkList" : false,
+                        "title" : "Read",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "F1C1207A-6426-467A-87E0-E61CB033185B-3419-0000C5D8E84EF970",
+                        "checkList" : false,
+                        "title" : "Read Response",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "15AC9EDF-5860-4F64-9764-279AFEE36829-3419-0000C5D8E84F9B3F",
+                        "checkList" : false,
+                        "title" : "Invalidate",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "F648EBEC-D940-4F55-95C4-E5EB6F052DAA-3419-0000C5D8E8503A24",
+                        "checkList" : false,
+                        "title" : "Invalidate Acknowledge",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "0988FFDC-21CF-480E-A55A-F70EB69A9707-3419-0000C5D8E850D294",
+                        "checkList" : false,
+                        "title" : "Read Invalidate",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      },
+                      {
+                        "detach" : false,
+                        "style" : {
+                          "lineColor" : "{173, 217, 55, 1.00}",
+                          "fontName" : "Avenir",
+                          "fontStyle" : "normal",
+                          "fontWeight" : "normal",
+                          "fontFamily" : "Avenir",
+                          "enablePalette" : true
+                        },
+                        "folded" : false,
+                        "id" : "DA15422F-EA54-4BD7-82FD-D9A445B5D8F6-3419-0000C5D8E8516E5B",
+                        "checkList" : false,
+                        "title" : "Writeback",
+                        "position" : "{0, 0}",
+                        "note" : {
+
+                        },
+                        "highlight" : false,
+                        "checkboxStatus" : 0
+                      }
+                    ],
+                    "checkboxStatus" : 0
+                  }
+                ],
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "B3A2F267-2047-4301-AC88-5880B4791F1A-3419-0000C5DA60774021",
+            "checkList" : false,
+            "title" : "写缓冲器（Store\/Write Buffer）",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "写缓冲器使得处理器进行写操作的时候可以不用等待其他处理器全部回复Invalidate Acknowledge以后才进行更新缓存行，而是直接将写操作数据写入写缓冲器以后就认为该写操作已经完成。\n后续处理器接收到所有Invalidate Acknowledge后再将写缓冲器的相应数据写入相应缓存行中"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "651F6356-7CAD-40D2-988E-ACD84F060D49-3419-0000C7A66373B0A7",
+                "checkList" : false,
+                "title" : "存储转发",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "一个处理器在更新完一个变量紧接着又读取该变量的时候可以直接从写缓冲器中读取相应数据"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "8DE85E6C-4B38-4385-8614-F6D642907472-3419-0000C9B8FF4FA67A",
+                "checkList" : false,
+                "title" : "特性：处理器内部的私有存储部件，一个处理器的写缓冲器内容是无法被其他处理器读取的",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "605E3D5A-836A-4E67-821F-CBB68DB097CA-3419-0000C9D01F72D209",
+                "checkList" : false,
+                "title" : "导致问题：内存重排序和可见性问题",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "06A6A460-EDAB-4953-8566-5963B6FDB3F0-3419-0000C6F2DEA627AC",
+            "checkList" : false,
+            "title" : "无效化队列（Invalidate Queue）（x86处理器没有使用无效化队列）",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "处理器接收到Invalidate消息后并用不把相应数据（逻辑）删除后再返回Invalidate Acknowledge，而是直接把消息存入无效化队列以后就返回Invalidate Acknowledge，从而减少写操作处理器所需的等待时间"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "E991761C-7F1D-4885-B191-8922A1BF79BE-3419-0000CC2E4B78CDCF",
+                "checkList" : false,
+                "title" : "导致问题：可见性问题",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "68C27B9D-B055-41AD-A9B8-B39C73FB4046-3419-0000CC156F331546",
+            "checkList" : false,
+            "title" : "内存屏障",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "基本内存屏障是对一系列指令的称呼，这些指令禁止该指令左边的任何X操作与该指令右边的任何Y操作重排序，从而确保该指令左边的所有X操作先于该指令右边的Y操作提交，即内存操作作用到高速缓存或者主存上"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "0AE1E03C-79AD-4F59-BA7F-4049FB75692A-3419-0000CDDE7552878A",
+                "checkList" : false,
+                "title" : "StoreLoad：许多处理器将此屏障实现为通用屏障，能够实现其他三种屏障的效果",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "8237A66C-CE8B-47FA-88B8-A83DFAC0A254-3419-0000CDE00EBD2B39",
+                "checkList" : false,
+                "title" : "StoreStore",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "35E84F48-7DA2-464B-87D6-4E0F6529EB9E-3419-0000CDE1C5A29292",
+                "checkList" : false,
+                "title" : "LoadStore",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "7E8619EF-7671-4683-9EF5-D91E418C959A-3419-0000CDE3ECAFE03A",
+                "checkList" : false,
+                "title" : "LoadLoad",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{173, 217, 55, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "0338B4C2-279E-470B-B31C-0CCFFB7E5D8B-3419-0000D5A634A41F75",
+            "checkList" : false,
+            "title" : "对原子性，可见性，有序性的保证",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "lineColor" : "{173, 217, 55, 1.00}",
+                  "fontName" : "Avenir",
+                  "fontStyle" : "normal",
+                  "fontWeight" : "normal",
+                  "fontFamily" : "Avenir",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "FBBF7BA3-9EDB-47BE-AB16-1FEF77B1ACE1-3419-0000D5AD39E1E764",
+                "checkList" : false,
+                "title" : "原子性",
+                "position" : "{0, 0}",
+                "note" : {
+                  "text" : "JMM规定对除了double\/long以外的基本类型和引用类型的读写操作具有原子性，并且特别规定对volatile修饰的double\/long类型的读写操作也具有原子性"
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{251, 168, 71, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "A07C6BE6-9BCB-48D8-A1E1-63D5DD096AA8-3419-0000E01C539789C6",
+        "checkList" : false,
+        "title" : "jvm对内部锁的优化（仅在server模式下起作用）",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "76B5A1BC-E555-4471-B174-A079FDF197CB-3419-0000E502C137B430",
+            "checkList" : false,
+            "title" : "锁消除",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "B5C893AA-69DC-4245-A5BE-96C016BD9F62-3419-0000E5046B7A5446",
+            "checkList" : false,
+            "title" : "锁粗化",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "F1392734-0106-4DAB-8839-C01E1FDFDDC3-3419-0000E50606BB3616",
+            "checkList" : false,
+            "title" : "偏向锁：适合于大多数锁不存在锁争用的系统中，如果大多数锁都存在锁争用，可以考虑关闭偏向锁优化，可能会膨胀成轻量级锁",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "A8CC1CCE-93B0-4F49-89CB-933217B7588A-3419-0000E55F64D73D50",
+            "checkList" : false,
+            "title" : "适应性锁（轻量级锁）：适合于绝大多数线程对该锁的持有时间较短的情况，追求响应时间，通过自旋等待避免了上下文切换",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "lineColor" : "{251, 168, 71, 1.00}",
+              "fontName" : "Avenir",
+              "fontStyle" : "normal",
+              "fontWeight" : "normal",
+              "fontFamily" : "Avenir",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "C14E2208-5C77-4854-94C4-DA8A0C94B6A2-24036-0000F26BD023F667",
+            "checkList" : false,
+            "title" : "重量级锁：追求吞吐量，当绝大多数线程对锁的持有时间较长或者锁争用程度较高时轻量级锁可能会膨胀成重量级锁",
+            "position" : "{0, 0}",
+            "note" : {
+
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "lineColor" : "{102, 106, 126, 1.00}",
+          "fontName" : "Avenir",
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "fontFamily" : "Avenir",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "1DB9E999-032A-4523-9484-5B20C6FF6469-24036-0000F02B033439EF",
+        "checkList" : false,
+        "title" : "java对象内存布局",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
         "checkboxStatus" : 0
       }
     ],

@@ -187,6 +187,25 @@
             },
             "highlight" : false,
             "checkboxStatus" : 0
+          },
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{124, 214, 212, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "F8EE4528-1688-47AB-A5D9-98A4365018CE-674-00007D2AF7FE9232",
+            "checkList" : false,
+            "title" : "-XX:+PrintGCDetails",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "输出GC信息"
+            },
+            "highlight" : false,
+            "checkboxStatus" : 0
           }
         ],
         "checkboxStatus" : 0
@@ -2024,6 +2043,124 @@
               "text" : "将热点字节码动态编译为宿主机的机器码（程序运行阶段）"
             },
             "highlight" : false,
+            "checkboxStatus" : 0
+          }
+        ],
+        "checkboxStatus" : 0
+      },
+      {
+        "detach" : false,
+        "style" : {
+          "fontStyle" : "normal",
+          "lineColor" : "{178, 148, 139, 1.00}",
+          "fontWeight" : "normal",
+          "enablePalette" : true
+        },
+        "folded" : false,
+        "id" : "8F2BF656-443C-4917-8963-53D482E53D76-674-00007DE1B7481D3C",
+        "checkList" : false,
+        "title" : "垃圾回收",
+        "position" : "{0, 0}",
+        "note" : {
+
+        },
+        "highlight" : false,
+        "subtopics" : [
+          {
+            "detach" : false,
+            "style" : {
+              "fontStyle" : "normal",
+              "lineColor" : "{178, 148, 139, 1.00}",
+              "fontWeight" : "normal",
+              "enablePalette" : true
+            },
+            "folded" : false,
+            "id" : "05FD55BD-8FAF-4314-934D-5D8E2F23E00C-674-00007DE44CE9B90E",
+            "checkList" : false,
+            "title" : "引用",
+            "position" : "{0, 0}",
+            "note" : {
+              "text" : "package io.github.viscent.mtia.test;\n\nimport java.lang.ref.PhantomReference;\nimport java.lang.ref.ReferenceQueue;\nimport java.lang.ref.SoftReference;\nimport java.lang.ref.WeakReference;\n\npublic class ReferenceTest extends WeakReference<MyWeakReference> {\n   private MyStrongReference MyStrongReference;\n\n    public ReferenceTest(MyWeakReference MyWeakReference, MyStrongReference MyStrongReference) {\n        super(MyWeakReference);\n        this.MyStrongReference = MyStrongReference;\n    }\n\n    public MyStrongReference getMyStrongReference() {\n        return MyStrongReference;\n    }\n\n    public static void main(String[] args) throws InterruptedException {\n        \/\/第一种写法，直接在构造函数里面new，简单\n        ReferenceTest referenceTest = new ReferenceTest(new MyWeakReference(), new MyStrongReference());\n\n        \/\/第二种写法，最后要手动把myWeakReference置为空\n        MyWeakReference myWeakReference = new MyWeakReference();\n        ReferenceTest referenceTest2 = new ReferenceTest(myWeakReference, new MyStrongReference());\n        myWeakReference = null;\n\n        \/\/错误写法!这样会把弱引用再次变为强引用\n\/\/        MyWeakReference myWeakReference1 = referenceTest.get();\n\n        \/\/软引用只会在内存空间不足的时候才会被回收\n        SoftReference<MyWeakReference> softReference = new SoftReference<>(new MyWeakReference());\n\n        \/\/虚引用和没有任何引用一样，在任何时候都可能被垃圾回收器回收。主要用来跟踪对象被垃圾回收器回收的活动\n        ReferenceQueue referenceQueue = new ReferenceQueue();\n        PhantomReference phantomReference = new PhantomReference(new MyWeakReference(),referenceQueue);\n\n        System.gc();\n        Thread.sleep(5000);\n        System.out.println(referenceTest.get());\n        System.out.println(referenceTest2.get());\n        System.out.println(softReference.get());\n        System.out.println(phantomReference.get());\n    }\n}\n\nclass MyWeakReference{\n    @Override\n    protected void finalize() throws Throwable {\n        super.finalize();\n        System.out.println(\"MyWeakReference finalize\");\n    }\n}\n\nclass MyStrongReference{\n    @Override\n    protected void finalize() throws Throwable {\n        super.finalize();\n        System.out.println(\"MyStrongReference finalize\");\n    }\n}"
+            },
+            "highlight" : false,
+            "subtopics" : [
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "B386E076-BB95-4192-AFE0-E6120B5CBDD4-674-00007DE5ECB309EA",
+                "checkList" : false,
+                "title" : "强引用",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "955AA17A-1AFA-4211-BE1D-824EA6DFA0F7-674-00007DE8715B40D5",
+                "checkList" : false,
+                "title" : "软引用",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "83FD053C-602E-4625-9EAA-A0562CE18965-674-00007DEA091C1585",
+                "checkList" : false,
+                "title" : "弱引用",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              },
+              {
+                "detach" : false,
+                "style" : {
+                  "fontStyle" : "normal",
+                  "lineColor" : "{178, 148, 139, 1.00}",
+                  "fontWeight" : "normal",
+                  "enablePalette" : true
+                },
+                "folded" : false,
+                "id" : "FD89DA51-8E3E-4B43-B305-41E80EDD5012-674-00007DEE803F1C38",
+                "checkList" : false,
+                "title" : "虚引用",
+                "position" : "{0, 0}",
+                "note" : {
+
+                },
+                "highlight" : false,
+                "checkboxStatus" : 0
+              }
+            ],
             "checkboxStatus" : 0
           }
         ],
